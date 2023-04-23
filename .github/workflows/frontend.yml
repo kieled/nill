@@ -24,6 +24,6 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: frontend/yarn.lock
       - name: Install dependencies
-        run: yarn ci
+        run: yarn
       - name: Run tests
         run: yarn lint
