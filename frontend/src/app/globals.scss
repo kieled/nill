@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-bg text-c-black-100 font-mont dark:bg-c-black-100 dark:text-bg px-7 antialiased;
+}
+
+.content {
+  @apply flex gap-4;
+}

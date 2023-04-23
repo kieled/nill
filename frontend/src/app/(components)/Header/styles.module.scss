@@ -1,0 +1,24 @@
+.container {
+  @apply flex justify-between py-5 items-center;
+}
+
+.links {
+  @apply flex gap-4 text-gray-600;
+}
+
+.logo {
+  @apply text-2xl font-medium;
+}
+
+.btn {
+  @apply bg-white rounded-xl px-5 py-1 text-lg shadow-sm
+  dark:bg-black dark:text-white;
+}
+
+.theme {
+  @apply outline-none flex items-center;
+
+  svg {
+    @apply w-5 h-5;
+  }
+}
