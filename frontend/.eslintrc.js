@@ -6,7 +6,7 @@ module.exports = {
     '@antfu',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react'],
   root: true,
   rules: {
     'react/jsx-key': 'error',
