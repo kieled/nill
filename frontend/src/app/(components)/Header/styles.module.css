@@ -11,8 +11,7 @@
 }
 
 .btn {
-  @apply bg-white rounded-xl px-5 py-1 text-lg shadow-sm
-  dark:bg-black dark:text-white;
+  @apply dark:bg-black dark:text-white rounded-xl px-5 py-1 text-lg shadow-sm;
 }
 
 .theme {

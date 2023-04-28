@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import useTheme from 'hooks/useTheme'
 import { MoonIcon } from '@heroicons/react/24/outline'
-import s from './styles.module.scss'
+import s from './styles.module.css'
 
 const options = {
   logo: 'nill',

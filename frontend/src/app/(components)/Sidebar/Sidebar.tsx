@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import s from './styles.module.scss'
+import s from './styles.module.css'
 import type { ISidebarItem } from './SidebarItem'
 import SidebarItem from './SidebarItem'
 

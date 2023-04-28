@@ -1,6 +1,6 @@
 import {Montserrat} from 'next/font/google'
 import Header from './(components)/Header'
-import './globals.scss'
+import './globals.css'
 import type {ISidebarItem} from './(components)/Sidebar'
 import Sidebar from './(components)/Sidebar'
 

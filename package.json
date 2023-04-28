@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "@next/eslint-plugin-next": "^13.3.1",
-    "husky": "^8.0.3"
-  }
-}
