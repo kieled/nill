@@ -1,28 +1,27 @@
-'use client'
-
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
-import type { FC } from 'react'
+import { type FC } from 'react'
+import cn from 'classnames'
 
 import s from './styles.module.css'
 
 interface Props {
   title: string
   children: React.ReactNode
+  onChange?: (fc: () => void) => void
 }
 
-const DisclosureComponent: FC<Props> = ({ title, children }) => {
+const DisclosureComponent: FC<Props> = ({ title, children, onChange }) => {
   return (
     <Disclosure as='div'>
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <Disclosure.Button
+            onClick={onChange ? () => onChange(close) : undefined}
             className={s.container}>
             <span>{title}</span>
             <ChevronUpIcon
-              className={`${
-                open ? s.opened : ''
-              } ${s.default}`}
+              className={cn(s.default, { [s.opened]: open })}
             />
           </Disclosure.Button>
           <Disclosure.Panel className={s.content}>

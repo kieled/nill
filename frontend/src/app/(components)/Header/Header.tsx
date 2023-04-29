@@ -1,8 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import useTheme from 'hooks/useTheme'
-import { MoonIcon } from '@heroicons/react/24/outline'
 import s from './styles.module.css'
 
 const options = {
@@ -21,24 +17,21 @@ const options = {
   ],
 }
 
-function Header() {
-  const [_, switchTheme] = useTheme()
-
+const Header = () => {
   return (
-        <header className={s.container}>
-            <h3 className={s.logo}>{options.logo}</h3>
-            <ul className={s.links}>
-                {options.buttons.map(i =>
-                    <li key={i.id}>
-                        <Link href={i.link}>{i.name}</Link>
-                    </li>)
-                }
-            </ul>
-            <ul className='flex gap-4'>
-                <button className={s.btn}>login</button>
-                <button onClick={switchTheme} className={s.theme}><MoonIcon /></button>
-            </ul>
-        </header>
+    <header className={s.container}>
+      <h3 className={s.logo}>{options.logo}</h3>
+      <ul className={s.links}>
+        {options.buttons.map(i =>
+          <li key={i.id}>
+            <Link href={i.link}>{i.name}</Link>
+          </li>)
+        }
+      </ul>
+      <ul className='flex gap-4'>
+        <button className={s.btn}>login</button>
+      </ul>
+    </header>
   )
 }
 

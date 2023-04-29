@@ -9,7 +9,9 @@ module.exports = {
   root: true,
   rules: {
     'react/jsx-key': 'error',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'semi': [2, 'never'],
+    '@typescript-eslint/no-empty-function': 'off'
   },
   env: {
     browser: true,

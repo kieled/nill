@@ -3,7 +3,11 @@
 }
 
 .links {
-  @apply flex gap-4 text-gray-600;
+  @apply flex gap-4;
+
+  > li {
+    @apply text-white transition-opacity text-opacity-60 hover:text-opacity-90 duration-100;
+  }
 }
 
 .logo {
@@ -11,13 +15,5 @@
 }
 
 .btn {
-  @apply dark:bg-black dark:text-white rounded-xl px-5 py-1 text-lg shadow-sm;
-}
-
-.theme {
-  @apply outline-none flex items-center;
-
-  svg {
-    @apply w-5 h-5;
-  }
+  @apply rounded-xl px-5 py-1 text-lg bg-primary-100 text-c-black-100;
 }

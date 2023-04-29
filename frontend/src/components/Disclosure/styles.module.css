@@ -7,9 +7,9 @@
 }
 
 .default {
-  @apply h-5 w-5 text-purple-500;
+  @apply h-5 w-5 text-white transition-transform;
 }
 
 .content {
-  @apply px-4 pt-4 pb-2 text-sm text-gray-500;
+  @apply px-4 py-2 text-sm overflow-hidden;
 }

@@ -1,8 +1,8 @@
-# nill - New IT community
+# nill - Scripts marketplace Next.JS
 
-### 🕧 Todo:
+### 🕧 Working process:
 
-| Task     |   |
-|----------|---|
+| Task     |    |
+|----------|----|
 | Frontend | ❌ |
 | Backend  | ❌ |
