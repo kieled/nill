@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - frontend/**
+      - .github/workflows/**
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
@@ -48,6 +49,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          cache-dependency-path: frontend/yarn.lock
       - run: npm ci
 
       - if: github.event_name == 'pull_request'
