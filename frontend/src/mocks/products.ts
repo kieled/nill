@@ -1,5 +1,5 @@
 import categories from "./categories"
-import {IProduct} from "app/(main)/_components/ProductCard/ProductCard"
+import {IProduct} from "app/_components/ProductCard/ProductCard"
 
 
 const products: IProduct[] = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => ({

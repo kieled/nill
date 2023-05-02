@@ -1,4 +1,4 @@
-import {ISidebarItem} from "app/(main)/_components/Sidebar"
+import {ISidebarItem} from "app/_components/Sidebar"
 
 const options: ISidebarItem[] = [
   {
