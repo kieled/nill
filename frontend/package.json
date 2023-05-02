@@ -19,8 +19,7 @@
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
-    "prepare": "cd ../ && husky install ./frontend/.husky",
-    "postbuild": "next-sitemap"
+    "prepare": "cd ../ && husky install ./frontend/.husky"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
