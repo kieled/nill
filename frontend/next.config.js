@@ -8,10 +8,5 @@ module.exports = withBundleAnalyzer({
   experimental: {
     appDir: true,
   },
-  eslint: {
-    dirs: ['.'],
-  },
-  poweredByHeader: false,
-  trailingSlash: true,
-  reactStrictMode: true,
+  reactStrictMode: true
 })

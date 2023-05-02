@@ -1,12 +1,12 @@
 'use client'
 
-import { type FC } from 'react'
+import type {FC} from 'react'
 import s from './styles.module.css'
 import Disclosure from 'components/Disclosure'
 import Link from 'next/link'
 import useAutoCloseDisclosure from 'hooks/useAutoCloseDisclosure'
 
-export interface ISideBarItem {
+export interface ISidebarItem {
   id: number
   name: string
   sub: {
@@ -17,10 +17,10 @@ export interface ISideBarItem {
 }
 
 interface Props {
-  items: ISideBarItem[]
+  items: ISidebarItem[]
 }
 
-const Sidebar: FC<Props> = ({ items }) => {
+const Sidebar: FC<Props> = ({items}) => {
   const [onChange] = useAutoCloseDisclosure()
 
   return (
@@ -31,17 +31,11 @@ const Sidebar: FC<Props> = ({ items }) => {
         key={i.id}
         onChange={(close: () => void) => onChange(i.id, close)}
       >
-        <div className={s.item}>
-          {i.sub.map(d =>
-            <Link
-              className={s.itemLink}
-              key={d.id}
-              href={d.link}
-            >
-              {d.name}
-            </Link>
-          )}
-        </div>
+        {i.sub.map(d =>
+          <Link className={s.itemLink} key={d.id} href={d.link}>
+            {d.name}
+          </Link>
+        )}
       </Disclosure>)}
     </aside>
   )

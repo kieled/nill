@@ -1,32 +1,41 @@
-import { Disclosure } from '@headlessui/react'
-import { ChevronUpIcon } from '@heroicons/react/20/solid'
-import { type FC } from 'react'
+import {Disclosure} from '@headlessui/react'
+import {ChevronUpIcon} from '@heroicons/react/20/solid'
+import {type FC} from 'react'
 import cn from 'classnames'
+import AnimateHeight from 'react-animate-height'
 
 import s from './styles.module.css'
 
 interface Props {
   title: string
-  children: React.ReactNode
+  children: React.ReactNode[]
   onChange?: (fc: () => void) => void
 }
 
-const DisclosureComponent: FC<Props> = ({ title, children, onChange }) => {
+const DisclosureComponent: FC<Props> = (
+  {
+    title,
+    children,
+    onChange
+  }
+) => {
   return (
     <Disclosure as='div'>
-      {({ open, close }) => (
+      {({open, close}) => (
         <>
           <Disclosure.Button
             onClick={onChange ? () => onChange(close) : undefined}
             className={s.container}>
             <span>{title}</span>
             <ChevronUpIcon
-              className={cn(s.default, { [s.opened]: open })}
+              className={cn(s.default, {[s.opened]: open})}
             />
           </Disclosure.Button>
-          <Disclosure.Panel className={s.content}>
-            {children}
-          </Disclosure.Panel>
+          <AnimateHeight height={open ? 'auto' : 0} duration={200}>
+            <Disclosure.Panel className={s.content} static>
+              {children.map(i => i)}
+            </Disclosure.Panel>
+          </AnimateHeight>
         </>
       )}
     </Disclosure>

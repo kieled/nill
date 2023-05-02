@@ -1,0 +1,28 @@
+.wrapper {
+    @apply relative z-40;
+}
+
+.background {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm;
+}
+
+.inner {
+    @apply fixed inset-0 overflow-y-auto;
+}
+
+.center {
+    @apply flex items-center justify-center min-h-screen items-center p-4 text-center;
+}
+
+.modal {
+    @apply w-full max-w-md overflow-hidden bg-c-black-70 border-2 border-primary-50 rounded-xl
+    p-6 text-left align-middle shadow-xl relative;
+}
+
+.title {
+    @apply text-xl text-gray-200 mb-5;
+}
+
+.close {
+    @apply absolute top-4 right-4 cursor-pointer p-2;
+}

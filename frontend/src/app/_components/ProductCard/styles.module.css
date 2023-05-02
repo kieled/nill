@@ -1,0 +1,24 @@
+.container {
+    @apply bg-primary-10 border-2 border-primary-30 rounded-xl text-center font-medium
+    transition-colors transition-transform hover:border-primary-60 hover:scale-[1.02];
+
+    .image {
+        @apply w-full h-auto rounded-xl p-2;
+    }
+
+    .content {
+        @apply py-3;
+    }
+
+    .title {
+        @apply text-lg flex gap-2 items-center;
+    }
+
+    .price {
+        @apply text-xl;
+    }
+
+    .description {
+        @apply text-sm text-gray-400;
+    }
+}
