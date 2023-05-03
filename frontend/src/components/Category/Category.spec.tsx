@@ -17,6 +17,6 @@ describe('Category', () => {
     const {container} = render(<Category icon="github"/>)
     const image = container.querySelector('img')
     expect(image).toHaveAttribute('alt', '')
-    expect(image).toHaveAttribute('title', '')
+    expect(image).not.toHaveAttribute('title', '')
   })
 })
