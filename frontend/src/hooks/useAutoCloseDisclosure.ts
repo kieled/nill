@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import {useCallback, useState} from 'react'
 
 interface OpenItem {
   id: number
@@ -6,7 +6,7 @@ interface OpenItem {
 }
 
 const useAutoCloseDisclosure = () => {
-  const [_, setOpen] = useState<OpenItem>()
+  const [, setOpen] = useState<OpenItem>()
 
   const onChange = useCallback((id: number, close: () => void) => {
     setOpen((prev) => {
@@ -14,7 +14,7 @@ const useAutoCloseDisclosure = () => {
         return undefined
       }
       prev?.close()
-      return { id, close }
+      return {id, close}
     })
   }, [])
 

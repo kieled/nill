@@ -24,15 +24,20 @@ const DisclosureComponent: FC<Props> = (
       {({open, close}) => (
         <>
           <Disclosure.Button
-            onClick={onChange ? () => onChange(close) : undefined}
+            onClick={onChange ? () => {
+              return onChange(close)
+            } : undefined}
             className={s.container}>
             <span>{title}</span>
             <ChevronUpIcon
               className={cn(s.default, {[s.opened]: open})}
             />
           </Disclosure.Button>
-          <AnimateHeight height={open ? 'auto' : 0} duration={200}>
-            {open && <Disclosure.Panel className={s.content} static>
+          <AnimateHeight
+            height={open ? 'auto' : 0}
+            duration={200}
+          >
+            <Disclosure.Panel className={s.content} static>
               {
                 children
                   ? Array.isArray(children)
@@ -40,7 +45,7 @@ const DisclosureComponent: FC<Props> = (
                     : children
                   : undefined
               }
-            </Disclosure.Panel>}
+            </Disclosure.Panel>
           </AnimateHeight>
         </>
       )}
