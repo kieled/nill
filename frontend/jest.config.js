@@ -6,6 +6,13 @@ const createJestConfig = nextJest({
 })
 
 const customJestConfig = {
+    moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1',
+
+        '^@/public/(.*)$': '<rootDir>/public/$1',
+
+        '^__mocks__/(.*)$': '<rootDir>/__mocks__/$1',
+    },
     roots: ['<rootDir>'],
     modulePaths: ['<rootDir>'],
     moduleDirectories: ['node_modules'],
