@@ -33,4 +33,4 @@ const customJestConfig = {
     testEnvironment: 'jest-environment-jsdom',
 }
 
-export default createJestConfig(customJestConfig)
+module.exports = createJestConfig(customJestConfig)
