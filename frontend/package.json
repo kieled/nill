@@ -8,7 +8,6 @@
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "export": "next export",
-    "build-prod": "run-s clean build export",
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",

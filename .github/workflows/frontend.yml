@@ -2,13 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
     paths:
       - frontend/**
       - .github/workflows/**
   pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
     paths:
       - frontend/**
 
@@ -20,7 +20,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [ 18.x ]
     name: Build with ${{ matrix.node-version }}
     runs-on: ubuntu-latest
 
@@ -33,12 +33,12 @@ jobs:
           cache: "npm"
           cache-dependency-path: frontend/package-lock.json
       - run: npm ci
-      - run: npm run build-prod
+      - run: npm run build
 
   test:
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [ 18.x ]
 
     name: Run all tests
     runs-on: ubuntu-latest
