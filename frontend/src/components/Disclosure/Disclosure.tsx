@@ -8,7 +8,7 @@ import s from './styles.module.css'
 
 interface Props {
   title: string
-  children: React.ReactNode[]
+  children?: React.ReactNode[] | React.ReactNode
   onChange?: (fc: () => void) => void
 }
 
@@ -32,9 +32,15 @@ const DisclosureComponent: FC<Props> = (
             />
           </Disclosure.Button>
           <AnimateHeight height={open ? 'auto' : 0} duration={200}>
-            <Disclosure.Panel className={s.content} static>
-              {children.map(i => i)}
-            </Disclosure.Panel>
+            {open && <Disclosure.Panel className={s.content} static>
+              {
+                children
+                  ? Array.isArray(children)
+                    ? children.map(i => i)
+                    : children
+                  : undefined
+              }
+            </Disclosure.Panel>}
           </AnimateHeight>
         </>
       )}

@@ -2,7 +2,7 @@
 
 ### 🕧 Working process:
 
-| Task     |    |
-|----------|----|
-| Frontend | ❌ |
+| Task     |   |
+|----------|---|
+| Frontend | ↻ |
 | Backend  | ❌ |

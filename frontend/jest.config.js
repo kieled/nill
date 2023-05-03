@@ -22,7 +22,11 @@ const customJestConfig = {
     transform: {
         '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {presets: ['next/babel']}],
     },
-    setupFilesAfterEnv: ['@testing-library/jest-dom', '@testing-library/jest-dom/extend-expect'],
+    setupFilesAfterEnv: [
+        '@testing-library/jest-dom',
+        '@testing-library/jest-dom/extend-expect',
+        'resize-observer-polyfill/dist/ResizeObserver.global'
+    ],
 }
 
 module.exports = createJestConfig(customJestConfig)

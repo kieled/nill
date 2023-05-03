@@ -30,9 +30,9 @@ const Modal: FC<Props> = (
           <div className={s.center}>
             <Dialog.Panel className={s.modal}>
               {title &&
-                <Dialog.Title as="h3" className={s.title}>
-                  {title}
-                </Dialog.Title>
+                  <Dialog.Title as="h3" className={s.title}>
+                    {title}
+                  </Dialog.Title>
               }
               <div onClick={onClose} className={s.close}>
                 <XMarkIcon className='w-7 h-7'/>

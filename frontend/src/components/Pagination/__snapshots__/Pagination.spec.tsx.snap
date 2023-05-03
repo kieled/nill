@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component renders correctly 1`] = `
+<div>
+  <button
+    data-testid="prev"
+    disabled=""
+  >
+    &lt;
+  </button>
+  <button
+    class="active"
+  >
+    1
+  </button>
+  <button
+    class=""
+  >
+    2
+  </button>
+  <button
+    class=""
+  >
+    3
+  </button>
+  <button
+    class=""
+  >
+    4
+  </button>
+  <button
+    class=""
+  >
+    5
+  </button>
+  <button
+    data-testid="next"
+  >
+    &gt;
+  </button>
+</div>
+`;

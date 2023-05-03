@@ -26,7 +26,10 @@ const Pagination: FC<Props> = (
     const startPage =
       currentPage <= Math.floor(visiblePageButtonsCount / 2)
         ? 1
-        : currentPage - Math.floor(visiblePageButtonsCount / 2)
+        : Math.min(
+          currentPage - Math.floor(visiblePageButtonsCount / 2),
+          pageCount - visiblePageButtonsCount + 1
+        )
     const endPage = Math.min(startPage + visiblePageButtonsCount - 1, pageCount)
     return Array.from(
       {length: endPage - startPage + 1},
@@ -56,7 +59,7 @@ const Pagination: FC<Props> = (
 
   return (
     <div>
-      <button onClick={handlePrevPageClick} disabled={currentPage === 1}>
+      <button data-testid='prev' onClick={handlePrevPageClick} disabled={currentPage === 1}>
         {"<"}
       </button>
       {visiblePages.map((pageNumber) => (
@@ -68,7 +71,7 @@ const Pagination: FC<Props> = (
           {pageNumber}
         </button>
       ))}
-      <button onClick={handleNextPageClick} disabled={currentPage === pageCount}>
+      <button data-testid='next' onClick={handleNextPageClick} disabled={currentPage === pageCount}>
         {">"}
       </button>
     </div>
