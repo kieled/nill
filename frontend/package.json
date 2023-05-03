@@ -13,6 +13,7 @@
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty",
     "test": "jest",
+    "test:ci": "jest --ci",
     "commit": "cz",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
